@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CategoryType" representedClassName="CategoryType" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="recipe" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Recipe" inverseName="categoryType" inverseEntity="Recipe"/>
+    </entity>
+    <entity name="Ingredient" representedClassName="Ingredient" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="systemGenerated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="recipe" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Recipe" inverseName="ingredient" inverseEntity="Recipe"/>
+    </entity>
+    <entity name="Recipe" representedClassName="Recipe" syncable="YES">
+        <attribute name="cookingInstructions" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="prepTimeInMins" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="shortDesc" optional="YES" attributeType="String"/>
+        <relationship name="categoryType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryType" inverseName="recipe" inverseEntity="CategoryType"/>
+        <relationship name="ingredient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="recipe" inverseEntity="Ingredient"/>
+    </entity>
+    <elements>
+        <element name="CategoryType" positionX="-295.1484375" positionY="89.6796875" width="128" height="73"/>
+        <element name="Ingredient" positionX="221.5234375" positionY="10.88671875" width="128" height="88"/>
+        <element name="Recipe" positionX="-50.94140625" positionY="-72.15234375" width="128" height="133"/>
+    </elements>
 </model>
