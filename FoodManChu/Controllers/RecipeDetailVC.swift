@@ -32,6 +32,8 @@ class RecipeDetailVC: UIViewController {
     
     var delegate: ShareRecipeDelegate?
     
+    var recipeDuplicated = false
+    
     //MARK: - TODO: Deal with deleting an ingredient while creating/editing a recipe
     
     //MARK: - ViewDidLoad
@@ -198,20 +200,26 @@ class RecipeDetailVC: UIViewController {
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
         
         saveRecipe()
-        navigationController?.popViewController(animated: true)
+        // if recipe was duplicated, then return to HomeVC instead of ViewRecipeVC
+        if recipeDuplicated {
+            navigationController?.popToViewController((navigationController?.viewControllers[0])!, animated: true)
+        } else {
+            navigationController?.popViewController(animated: true)
+        }
         
     }
 
     
     @IBAction func deleteRecipeTapped(_ sender: RoundButton) {
-        
         // if existing recipe, delete it
         if recipeToEdit != nil {
             Constants.context.delete(recipeToEdit!)
             Constants.ad.saveContext()
-            navigationController?.popViewController(animated: true)
+            // pop back to HomeVC or RecipeVC after recipe deletion
+            navigationController?.popToViewController((navigationController?.viewControllers[0])!,
+                                                      animated: true)
         } else {
-        // clear the new recipe fields 
+        // or clear the new recipe fields 
             recipeName.text = ""
             recipeDescription.text = ""
             recipePrepTimeInMins.text = "0"
@@ -226,20 +234,20 @@ class RecipeDetailVC: UIViewController {
     
     
     @IBAction func duplicateRecipeTapped(_ sender: RoundButton) {
-        
         // save the recipe currently displayed
         saveRecipe()
         // set up the duplicate recipe
         recipeToEdit = nil
         recipeName.text = "\(recipeName.text!) - Copy"
+        
+        recipeDuplicated = true
+
     }
     
     
      // MARK: - Navigation
      
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == Constants.Segues.chooseIngredients {
             let destinationVC = segue.destination as! ChooseIngredientTVC
             destinationVC.recipeIngredients = recipeIngredientsArray

@@ -37,11 +37,11 @@ class ViewRecipeVC: UIViewController {
         updateUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        if recipe.name == nil {
-            navigationController?.popViewController(animated: true)
-        }
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        if recipe.name == nil {
+//            navigationController?.popViewController(animated: true)
+//        }
+//    }
     
     
     //MARK: - Instance Methods

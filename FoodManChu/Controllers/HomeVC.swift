@@ -53,7 +53,7 @@ class HomeVC: UIViewController {
         super.viewWillAppear(true)
         // set up the ingredient controller delegate
         setupIngredientControllerDelegate()
-        tableView.reloadData()
+        searchForRecipes()
     }
     
     //MARK: - Instance Methods
@@ -73,10 +73,10 @@ class HomeVC: UIViewController {
         let categoryRequest = NSFetchRequest<CategoryType>(entityName: "CategoryType")
         let searchPredicate: NSPredicate
         
-        do {
+        do { // perform the search
             switch selectedSearchOption {
             case 0: // ingredient search
-                if searchText != "" {
+                if searchText != "" { // add a predicate if searchBar contains text
                     searchPredicate = NSPredicate(format: "name CONTAINS[cd] %@", searchText)
                     ingredientRequest.predicate = searchPredicate
                 }
@@ -90,19 +90,19 @@ class HomeVC: UIViewController {
                 }
                 searchResults.append(contentsOf: uniqueResults)
             case 1: // recipe name
-                if searchText != "" {
+                if searchText != "" { // add a predicate if searchBar contains text
                     searchPredicate = NSPredicate(format: "name CONTAINS[cd] %@", searchText)
                     recipeRequest.predicate = searchPredicate
                 }
                 searchResults = try Constants.context.fetch(recipeRequest)
             case 2: // recipe description
-                if searchText != "" {
+                if searchText != "" { // add a predicate if searchBar contains text
                     searchPredicate = NSPredicate(format: "shortDesc CONTAINS[cd] %@", searchText)
                     recipeRequest.predicate = searchPredicate
                 }
                 searchResults = try Constants.context.fetch(recipeRequest)
             case 3: // prep time in mins
-                if searchText != "" {
+                if searchText != "" { // add a predicate if searchBar contains text
                     searchPredicate = NSPredicate(format: "prepTimeInMins <= %i", Int16(searchText) ?? -999)
                     recipeRequest.predicate = searchPredicate
                 }
@@ -121,8 +121,12 @@ class HomeVC: UIViewController {
                     }
                 }
                 searchResults.append(contentsOf: uniqueResults)
+                
             default:
                 return
+            }
+            searchResults.sort { (lhsRecipe: Recipe, rhsRecipe: Recipe) -> Bool in
+                return lhsRecipe.name! < rhsRecipe.name!
             }
             
             tableView.reloadData()
