@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 
 enum Constants {
+    // set up the core data references
     static let ad = UIApplication.shared.delegate as! AppDelegate
     static let context = ad.persistentContainer.viewContext
+    // table view reuse cell ids
     static let ingredientCellReuseId = "IngredientCell"
     static let recipeCellReuseId = "RecipeCell"
     

@@ -106,17 +106,15 @@
 		B15FEC1B248E4D4900440632 /* FoodManChu */ = {
 			isa = PBXGroup;
 			children = (
-				B15616A9249C3FF200C1AA03 /* Protocols */,
-				B163F9BC2491834300E9AF73 /* Utils */,
-				B15FEC35248E518D00440632 /* Model */,
 				B15FEC1C248E4D4900440632 /* AppDelegate.swift */,
-				B15FEC1E248E4D4900440632 /* SceneDelegate.swift */,
-				B15FEC33248E517300440632 /* Controllers */,
-				B15FEC34248E518200440632 /* Views */,
 				B15FEC28248E4D4A00440632 /* Assets.xcassets */,
-				B15FEC2A248E4D4A00440632 /* LaunchScreen.storyboard */,
+				B15FEC33248E517300440632 /* Controllers */,
 				B15FEC2D248E4D4A00440632 /* Info.plist */,
-				B15FEC25248E4D4900440632 /* FoodManChu.xcdatamodeld */,
+				B15FEC35248E518D00440632 /* Model */,
+				B15616A9249C3FF200C1AA03 /* Protocols */,
+				B15FEC1E248E4D4900440632 /* SceneDelegate.swift */,
+				B163F9BC2491834300E9AF73 /* Utils */,
+				B15FEC34248E518200440632 /* Views */,
 			);
 			path = FoodManChu;
 			sourceTree = "<group>";
@@ -141,6 +139,7 @@
 				B15FEC22248E4D4900440632 /* Main.storyboard */,
 				B163F9C3249199B200E9AF73 /* CustomCell.swift */,
 				B16AB28B2492F5450056B1F2 /* RoundButton.swift */,
+				B15FEC2A248E4D4A00440632 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +147,7 @@
 		B15FEC35248E518D00440632 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B15FEC25248E4D4900440632 /* FoodManChu.xcdatamodeld */,
 				B163F9B1249180DE00E9AF73 /* CategoryType+CoreDataProperties.swift */,
 				B163F9C52491AE9300E9AF73 /* Ingredient+CoreDataProperties.swift */,
 				B163F9B5249180DE00E9AF73 /* Recipe+CoreDataProperties.swift */,

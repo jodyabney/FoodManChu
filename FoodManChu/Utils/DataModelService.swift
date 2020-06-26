@@ -35,12 +35,8 @@ class DataModelService {
             attemptIngredientFetch()
         }
         
-        // set up the recipes
+        // get any existing recipes
         attemptRecipeFetch()
-//        if recipeController == nil || recipeController.sections?.count == 0 || recipeController.sections?.first?.numberOfObjects == 0 {
-//            generateRecipes()
-//            attemptRecipeFetch()
-//        }
     }
     
     //MARK: - Instance Methods
@@ -68,7 +64,7 @@ extension DataModelService {
     
     func generateIngredients() {
         let ingredient01 = Ingredient(context: Constants.context)
-        ingredient01.name = "Ground Beef"
+        ingredient01.name = "Beef, Ground"
         ingredient01.systemGenerated = true
         let ingredient02 = Ingredient(context: Constants.context)
         ingredient02.name = "Chicken"
@@ -213,7 +209,7 @@ extension DataModelService {
         ingredient47.name = "Salsa, Hot"
         ingredient47.systemGenerated = true
         let ingredient48 = Ingredient(context: Constants.context)
-        ingredient48.name = "Sour Cream"
+        ingredient48.name = "Cream, Sour"
         ingredient48.systemGenerated = true
         let ingredient49 = Ingredient(context: Constants.context)
         ingredient49.name = "Lemon"
@@ -223,29 +219,6 @@ extension DataModelService {
         ingredient50.systemGenerated = true
         
         Constants.ad.saveContext()
-    }
-    
-    func generateRecipes() {
-        // https://healthyrecipesblogs.com/broiled-burgers/
-        let recipe1 = Recipe(context: Constants.context)
-        recipe1.name = "Broiled Burgers"
-        recipe1.prepTimeInMins = 20
-        recipe1.shortDesc = "A sprinkling of smoked paprika makes all the difference in this delicious recipe for broiled hamburgers."
-        recipe1.cookingInstructions = """
-        1. Preheat broiler on high. Position an oven rack directly (3-4 inches) below the heating element. Line a rimmed broiler-safe baking sheet with foil and fit it with a wire rack. Spray the rack with oil.
-        2. Sprinkle the Kosher salt, pepper, garlic powder and smoked paprika on the meat. Work the spices gently and evenly into the meat.
-        3. Divide the seasoned meat into four equal 8-oz portions and gently shape them into four large patties, 5 inches wide and 1/2 inch thick.
-        4. Place the burger patties on the prepared wire rack. Push down on the center of each patty to create a 2-inch-wide dimple. This will help the burgers stay flat as they cook.
-        5. Broil the burgers to medium-rare, about 3 minutes per side. For medium, broil 4 minutes per side.
-        6. Turn the oven off, top each burger patty with a slice of cheese, and return to the still-warm oven for just a few seconds, until cheese is melted. Serve the broiled burgers immediately.
-        """
-
-//        let categories = categoryTypeController.sections![0].objects as! [CategoryType]
-//        print("categories[1]: \(categories[1])")
-//        recipe1.categoryType = categories[1] // meat
-
-        Constants.ad.saveContext()
-
     }
     
     func attemptCategoryTypeFetch() {
@@ -264,7 +237,7 @@ extension DataModelService {
         do {
             try controller.performFetch()
         } catch let err {
-            print(err)
+            print(err.localizedDescription)
         }
     }
     
@@ -284,7 +257,7 @@ extension DataModelService {
         do {
             try controller.performFetch()
         } catch let err {
-            print(err)
+            print(err.localizedDescription)
         }
     }
     
@@ -304,7 +277,7 @@ extension DataModelService {
         do {
             try controller.performFetch()
         } catch let err {
-            print(err)
+            print(err.localizedDescription)
         }
     }
 }

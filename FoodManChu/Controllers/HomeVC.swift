@@ -44,24 +44,28 @@ class HomeVC: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        // cancel the ingredient controller delegate when the HomeVC view is not displayed
         DataModelService.shared.ingredientController.delegate = nil
         super.viewDidDisappear(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
+        // set up the ingredient controller delegate
         setupIngredientControllerDelegate()
-        
         tableView.reloadData()
     }
     
     //MARK: - Instance Methods
     
-    func search() {
-        guard let searchText = searchBar.text, searchText != "" else { return }
+    func searchForRecipes() {
+        // ensure we have text in the searchBar
+        guard let searchText = searchBar.text else { return }
+        // set which search option is selected
         let selectedSearchOption = searchTypeControl.selectedSegmentIndex
+        // set up a search results array
         searchResults = []
+        // establish a set to ensure we only have unique recipe results
         var uniqueResults = Set<Recipe>()
         
         let recipeRequest = NSFetchRequest<Recipe>(entityName: "Recipe")
@@ -72,8 +76,10 @@ class HomeVC: UIViewController {
         do {
             switch selectedSearchOption {
             case 0: // ingredient search
-                searchPredicate = NSPredicate(format: "name CONTAINS[cd] %@", searchText)
-                ingredientRequest.predicate = searchPredicate
+                if searchText != "" {
+                    searchPredicate = NSPredicate(format: "name CONTAINS[cd] %@", searchText)
+                    ingredientRequest.predicate = searchPredicate
+                }
                 let ingredientSearchRequest: [Ingredient] = try Constants.context.fetch(ingredientRequest)
                 for ingredient in ingredientSearchRequest {
                     if let recipes = ingredient.recipe?.allObjects as? [Recipe] {
@@ -84,20 +90,28 @@ class HomeVC: UIViewController {
                 }
                 searchResults.append(contentsOf: uniqueResults)
             case 1: // recipe name
-                searchPredicate = NSPredicate(format: "name CONTAINS[cd] %@", searchText)
-                recipeRequest.predicate = searchPredicate
+                if searchText != "" {
+                    searchPredicate = NSPredicate(format: "name CONTAINS[cd] %@", searchText)
+                    recipeRequest.predicate = searchPredicate
+                }
                 searchResults = try Constants.context.fetch(recipeRequest)
             case 2: // recipe description
-                searchPredicate = NSPredicate(format: "shortDesc CONTAINS[cd] %@", searchText)
-                recipeRequest.predicate = searchPredicate
+                if searchText != "" {
+                    searchPredicate = NSPredicate(format: "shortDesc CONTAINS[cd] %@", searchText)
+                    recipeRequest.predicate = searchPredicate
+                }
                 searchResults = try Constants.context.fetch(recipeRequest)
             case 3: // prep time in mins
-                searchPredicate = NSPredicate(format: "prepTimeInMins <= %i", Int16(searchText) ?? -1)
-                recipeRequest.predicate = searchPredicate
+                if searchText != "" {
+                    searchPredicate = NSPredicate(format: "prepTimeInMins <= %i", Int16(searchText) ?? -999)
+                    recipeRequest.predicate = searchPredicate
+                }
                 searchResults = try Constants.context.fetch(recipeRequest)
             case 4: // category type
-                searchPredicate = NSPredicate(format: "name CONTAINS[cd] %@", searchText)
-                categoryRequest.predicate = searchPredicate
+                if searchText != "" {
+                    searchPredicate = NSPredicate(format: "name CONTAINS[cd] %@", searchText)
+                    categoryRequest.predicate = searchPredicate
+                }
                 let categorySearchResults: [CategoryType] = try Constants.context.fetch(categoryRequest)
                 for category in categorySearchResults {
                     if let recipes = category.recipe?.allObjects as? [Recipe] {
@@ -119,6 +133,11 @@ class HomeVC: UIViewController {
         
     }
     
+    func resetSearch() {
+        searchBar.text = nil
+        searchResults = []
+    }
+    
     
     //MARK: - IBActions
     
@@ -126,29 +145,34 @@ class HomeVC: UIViewController {
         
         switch sender.selectedSegmentIndex {
         case 0: // ingredient
+            resetSearch()
             DataModelService.shared.attemptIngredientFetch()
             tableView.reloadData()
         case 1: // recipe name
+            resetSearch()
             DataModelService.shared.attemptRecipeFetch()
             tableView.reloadData()
         case 2: // recipe description
+            resetSearch()
             DataModelService.shared.attemptRecipeFetch()
             tableView.reloadData()
         case 3: // recipe time
+            resetSearch()
             DataModelService.shared.attemptRecipeFetch()
             tableView.reloadData()
         case 4: // category type
+            resetSearch()
             DataModelService.shared.attemptCategoryTypeFetch()
             tableView.reloadData()
         default:
-            break
+            resetSearch()
+            tableView.reloadData()
         }
     }
     
     
     @IBAction func searchTapped(_ sender: RoundButton) {
-        
-        search()
+        searchForRecipes()
     }
     
     
@@ -158,6 +182,7 @@ class HomeVC: UIViewController {
         if segue.identifier == Constants.Segues.viewRecipe {
             let destinationVC = segue.destination as! ViewRecipeVC
             destinationVC.recipe = sender as? Recipe
+            // set the destination VC title to the recipe name
             destinationVC.title = destinationVC.recipe.name
         }
     }

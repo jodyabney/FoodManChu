@@ -117,94 +117,74 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13y-nZ-FJ4">
-                                                <rect key="frame" x="10" y="7.9999999999999982" width="45" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="10" y="7.9999999999999982" width="46" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eaz-0L-sTe">
-                                                <rect key="frame" x="63" y="7.9999999999999982" width="302" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="64" y="7.9999999999999982" width="301" height="23.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFE-oB-ayO">
                                                 <rect key="frame" x="10" y="38.333333333333329" width="355" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCd-iS-RzJ">
-                                                <rect key="frame" x="10" y="63.666666666666664" width="355" height="20.333333333333336"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="10" y="63.666666666666664" width="355" height="23.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Preparation Time in Mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nz-jg-xsP">
-                                                <rect key="frame" x="10" y="94" width="189.33333333333334" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="10" y="97" width="194" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcn-vP-rYb">
-                                                <rect key="frame" x="207.33333333333337" y="94" width="157.66666666666663" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="212" y="97" width="153" height="23.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFr-28-fVa">
-                                                <rect key="frame" x="10" y="124.33333333333333" width="70.333333333333329" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="10" y="127.33333333333333" width="72.333333333333329" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHI-wa-YVR">
-                                                <rect key="frame" x="88.333333333333343" y="124.33333333333333" width="276.66666666666663" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="90.333333333333343" y="127.33333333333333" width="274.66666666666663" height="23.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooking Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74E-fM-TCK">
-                                                <rect key="frame" x="10" y="154.66666666666666" width="355" height="20.333333333333343"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="10" y="157.66666666666666" width="355" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooking instructions text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epq-cN-pkc">
-                                                <rect key="frame" x="10" y="180" width="355" height="20.333333333333343"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="10" y="183" width="355" height="23.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5DH-ql-GFO">
-                                                <rect key="frame" x="0.0" y="235.33333333333331" width="375" height="386.99999999999994"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="387" id="Xin-op-J9x"/>
-                                                </constraints>
-                                                <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" textLabel="JlM-R0-9lh" style="IBUITableViewCellStyleDefault" id="yBa-Nj-aWM" customClass="CustomCell" customModule="FoodManChu" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yBa-Nj-aWM" id="9ek-yA-pgU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JlM-R0-9lh">
-                                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.666667938232422"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </tableViewCellContentView>
-                                                    </tableViewCell>
-                                                </prototypes>
-                                            </tableView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llk-MH-O7H">
-                                                <rect key="frame" x="10" y="210.33333333333331" width="355" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="10" y="216.33333333333331" width="355" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVc-hi-2vb">
+                                                <rect key="frame" x="10" y="241.33333333333331" width="355" height="23.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -213,17 +193,15 @@
                                         <constraints>
                                             <constraint firstItem="Epq-cN-pkc" firstAttribute="top" secondItem="74E-fM-TCK" secondAttribute="bottom" constant="5" id="57E-U8-0DW"/>
                                             <constraint firstItem="9nz-jg-xsP" firstAttribute="leading" secondItem="qpj-vQ-KRG" secondAttribute="leading" constant="10" id="7IE-Y9-Je6"/>
-                                            <constraint firstAttribute="trailing" secondItem="5DH-ql-GFO" secondAttribute="trailing" id="AMG-6q-MeQ"/>
+                                            <constraint firstItem="MVc-hi-2vb" firstAttribute="top" secondItem="Llk-MH-O7H" secondAttribute="bottom" constant="5" id="91U-vV-g0f"/>
                                             <constraint firstAttribute="trailing" secondItem="hFE-oB-ayO" secondAttribute="trailing" constant="10" id="FRe-1o-03R"/>
                                             <constraint firstAttribute="trailing" secondItem="yCd-iS-RzJ" secondAttribute="trailing" constant="10" id="HO9-p6-bhD"/>
                                             <constraint firstItem="13y-nZ-FJ4" firstAttribute="leading" secondItem="qpj-vQ-KRG" secondAttribute="leading" constant="10" id="ImV-jf-SaK"/>
                                             <constraint firstItem="13y-nZ-FJ4" firstAttribute="top" secondItem="qpj-vQ-KRG" secondAttribute="top" constant="8" id="JfF-s4-QrX"/>
                                             <constraint firstAttribute="trailing" secondItem="WHI-wa-YVR" secondAttribute="trailing" constant="10" id="KI0-V9-9os"/>
                                             <constraint firstAttribute="height" constant="1000" id="LHU-lu-x1h"/>
-                                            <constraint firstItem="5DH-ql-GFO" firstAttribute="leading" secondItem="qpj-vQ-KRG" secondAttribute="leading" id="P2p-GP-2ld"/>
                                             <constraint firstItem="74E-fM-TCK" firstAttribute="leading" secondItem="qpj-vQ-KRG" secondAttribute="leading" constant="10" id="Qkw-b5-QkL"/>
                                             <constraint firstItem="YFr-28-fVa" firstAttribute="top" secondItem="9nz-jg-xsP" secondAttribute="bottom" constant="10" id="Seq-dq-Iq9"/>
-                                            <constraint firstItem="5DH-ql-GFO" firstAttribute="top" secondItem="Llk-MH-O7H" secondAttribute="bottom" constant="5" id="TEN-6i-bCG"/>
                                             <constraint firstItem="Xcn-vP-rYb" firstAttribute="top" secondItem="yCd-iS-RzJ" secondAttribute="bottom" constant="10" id="Wga-ug-Z0c"/>
                                             <constraint firstAttribute="trailing" secondItem="Epq-cN-pkc" secondAttribute="trailing" constant="10" id="XRW-iK-vs7"/>
                                             <constraint firstItem="YFr-28-fVa" firstAttribute="leading" secondItem="qpj-vQ-KRG" secondAttribute="leading" constant="10" id="Xjz-Cz-rKY"/>
@@ -231,6 +209,7 @@
                                             <constraint firstItem="9nz-jg-xsP" firstAttribute="top" secondItem="yCd-iS-RzJ" secondAttribute="bottom" constant="10" id="bWO-yv-He8"/>
                                             <constraint firstItem="WHI-wa-YVR" firstAttribute="top" secondItem="9nz-jg-xsP" secondAttribute="bottom" constant="10" id="c2a-ko-G4X"/>
                                             <constraint firstItem="Epq-cN-pkc" firstAttribute="leading" secondItem="qpj-vQ-KRG" secondAttribute="leading" constant="10" id="cBt-X7-TZO"/>
+                                            <constraint firstItem="MVc-hi-2vb" firstAttribute="leading" secondItem="qpj-vQ-KRG" secondAttribute="leading" constant="10" id="gir-Mg-phP"/>
                                             <constraint firstAttribute="trailing" secondItem="Llk-MH-O7H" secondAttribute="trailing" constant="10" id="htv-JD-gO3"/>
                                             <constraint firstItem="Xcn-vP-rYb" firstAttribute="leading" secondItem="9nz-jg-xsP" secondAttribute="trailing" constant="8" id="jZN-Ks-vQV"/>
                                             <constraint firstItem="74E-fM-TCK" firstAttribute="top" secondItem="YFr-28-fVa" secondAttribute="bottom" constant="10" id="jnf-fD-mDq"/>
@@ -240,6 +219,7 @@
                                             <constraint firstItem="Eaz-0L-sTe" firstAttribute="leading" secondItem="13y-nZ-FJ4" secondAttribute="trailing" constant="8" id="s5Z-Iz-hfi"/>
                                             <constraint firstItem="hFE-oB-ayO" firstAttribute="top" secondItem="13y-nZ-FJ4" secondAttribute="bottom" constant="10" id="tHV-Zz-exj"/>
                                             <constraint firstItem="hFE-oB-ayO" firstAttribute="leading" secondItem="qpj-vQ-KRG" secondAttribute="leading" constant="10" id="u7N-vg-FLJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="MVc-hi-2vb" secondAttribute="trailing" constant="10" id="v9w-3n-rbx"/>
                                             <constraint firstAttribute="trailing" secondItem="74E-fM-TCK" secondAttribute="trailing" constant="10" id="vc9-qD-0Gr"/>
                                             <constraint firstAttribute="trailing" secondItem="Xcn-vP-rYb" secondAttribute="trailing" constant="10" id="vsb-uB-lAb"/>
                                             <constraint firstAttribute="trailing" secondItem="Eaz-0L-sTe" secondAttribute="trailing" constant="10" id="xEh-9G-i3Y"/>
@@ -279,10 +259,10 @@
                     <connections>
                         <outlet property="categoryLabel" destination="WHI-wa-YVR" id="9Mz-oP-wr0"/>
                         <outlet property="cookingInstructionsLabel" destination="Epq-cN-pkc" id="doU-6C-8MD"/>
+                        <outlet property="ingredientText" destination="MVc-hi-2vb" id="gwf-zs-HS3"/>
                         <outlet property="nameLabel" destination="Eaz-0L-sTe" id="xCq-26-CAG"/>
                         <outlet property="prepTimeLabel" destination="Xcn-vP-rYb" id="z5d-5p-8Li"/>
                         <outlet property="shortDescLabel" destination="yCd-iS-RzJ" id="pzl-nf-abu"/>
-                        <outlet property="tableView" destination="5DH-ql-GFO" id="Y95-h5-lMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuu-lH-CdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -436,13 +416,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7b-W6-vdx">
                                 <rect key="frame" x="20" y="105" width="46" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jp7-CI-uI2">
                                 <rect key="frame" x="74" y="98" width="281" height="34"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a short description of the recipe here" translatesAutoresizingMaskIntoConstraints="NO" id="V8H-sV-dda">
                                 <rect key="frame" x="20" y="170.33333333333334" width="335" height="50"/>
@@ -457,7 +437,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpy-W6-ZXx">
                                 <rect key="frame" x="20" y="142" width="335" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXh-tF-Fzn">
@@ -471,13 +451,13 @@
                                     <constraint firstAttribute="width" constant="113" id="Ytd-ed-KXB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooking Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJW-Wl-2v8">
                                 <rect key="frame" x="20" y="342.66666666666669" width="335" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter the recipe cooking instructions here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PGU-Eq-Sxs">
@@ -554,9 +534,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zc-h7-yZZ">
-                                <rect key="frame" x="282.66666666666669" y="228.33333333333334" width="72.333333333333314" height="20.333333333333343"/>
+                                <rect key="frame" x="183" y="228.33333333333334" width="172" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -565,6 +545,7 @@
                             <constraint firstItem="HUZ-3i-oPa" firstAttribute="centerY" secondItem="dXh-tF-Fzn" secondAttribute="centerY" id="0Bm-yx-Crz"/>
                             <constraint firstItem="Wpy-W6-ZXx" firstAttribute="top" secondItem="jp7-CI-uI2" secondAttribute="bottom" constant="10" id="0hl-wK-ux4"/>
                             <constraint firstItem="PGU-Eq-Sxs" firstAttribute="leading" secondItem="UQJ-YX-cnh" secondAttribute="leading" constant="20" id="13X-3I-kgJ"/>
+                            <constraint firstItem="7zc-h7-yZZ" firstAttribute="leading" secondItem="NWg-wE-sr6" secondAttribute="trailing" constant="50" id="5kC-VT-tuu"/>
                             <constraint firstItem="UBm-VJ-ejs" firstAttribute="top" secondItem="qtJ-jh-xao" secondAttribute="bottom" constant="8" id="78F-ho-Vzl"/>
                             <constraint firstItem="UQJ-YX-cnh" firstAttribute="trailing" secondItem="PGU-Eq-Sxs" secondAttribute="trailing" constant="20" id="CAw-A6-GZt"/>
                             <constraint firstItem="NWg-wE-sr6" firstAttribute="top" secondItem="V8H-sV-dda" secondAttribute="bottom" constant="8" id="EQg-8R-uEo"/>
@@ -624,7 +605,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcF-Nx-g5N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3770" y="815"/>
+            <point key="canvasLocation" x="3767" y="505"/>
         </scene>
         <!--Tap to Add/Remove Ingredient-->
         <scene sceneID="BFM-tR-o6o">

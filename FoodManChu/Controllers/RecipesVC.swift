@@ -45,14 +45,12 @@ class RecipesVC: UIViewController {
     //MARK: - IBActions
     
     @IBAction func addNewRecipeTapped(_ sender: UIBarButtonItem) {
-        
         performSegue(withIdentifier: Constants.Segues.addNewRecipe, sender: self)
     }
     
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.Segues.editRecipe {
             if let destinationVC = segue.destination as? RecipeDetailVC {

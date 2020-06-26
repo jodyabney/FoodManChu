@@ -51,6 +51,8 @@ class RecipeDetailVC: UIViewController {
         } else {
             duplicateButton.isEnabled = false
             duplicateButton.backgroundColor = .systemGray
+            categoryPicker.selectRow(0, inComponent: 0, animated: true)
+            recipeCategory = DataModelService.shared.categoryTypeController.fetchedObjects?.first
         }
         
         tableView.delegate = self

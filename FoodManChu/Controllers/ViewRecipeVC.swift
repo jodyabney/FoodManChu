@@ -17,32 +17,30 @@ class ViewRecipeVC: UIViewController {
     @IBOutlet weak var prepTimeLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var cookingInstructionsLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var ingredientText: UILabel!
     
     
     //MARK: - Properties
     
     var recipe: Recipe!
-    var recipeIngredients: [Ingredient] = []
-    
     
     
     //MARK: - ViewDidLoad
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // set up tableview
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        // updateUI
         updateUI()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         updateUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if recipe.name == nil {
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     
@@ -52,20 +50,31 @@ class ViewRecipeVC: UIViewController {
         
         nameLabel.text = recipe.name
         shortDescLabel.text = recipe.shortDesc
-        print(recipe.shortDesc)
         prepTimeLabel.text = "\(Int(recipe.prepTimeInMins))"
+        categoryLabel.text = recipe.categoryType?.name
         cookingInstructionsLabel.text = recipe.cookingInstructions
-        
+        ingredientText.text = createIngredientText()
+
+    }
+    
+    func createIngredientText() -> String {
+        var ingredientText = ""
+        var recipeIngredients: [String] = []
         if let ingredients = recipe.ingredient {
-            for ingredient in ingredients {
-                recipeIngredients.append(ingredient as! Ingredient)
+            for i in ingredients {
+                recipeIngredients.append((i as! Ingredient).name!)
+            }
+            recipeIngredients.sort()
+            for i in recipeIngredients {
+                ingredientText += "\(i)\n"
             }
         }
+        return ingredientText
+        
     }
     
     
     //MARK: - IBActions
-    
     
     
     
@@ -78,29 +87,6 @@ class ViewRecipeVC: UIViewController {
             destinationVC.recipeToEdit = recipe
             destinationVC.delegate = self
         }
-    }
-    
-
-}
-
-
-//MARK: - TableView Methods
-
-extension ViewRecipeVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipeIngredients.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.recipeCellReuseId,
-                                                 for: indexPath) as! CustomCell
-        configureCell(cell, indexPath: indexPath)
-        return cell
-    }
-    
-    func configureCell(_ cell: CustomCell, indexPath: IndexPath) {
-        let ingredient = recipeIngredients[indexPath.row]
-        cell.textLabel?.text = ingredient.name
     }
 }
 

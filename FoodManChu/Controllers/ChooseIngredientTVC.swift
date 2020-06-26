@@ -199,7 +199,7 @@ extension ChooseIngredientTVC: NSFetchedResultsControllerDelegate {
         do {
             try controller.performFetch()
         } catch let err {
-            print(err)
+            print(err.localizedDescription)
         }
     }
     

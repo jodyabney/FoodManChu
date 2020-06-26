@@ -31,12 +31,12 @@ class IngredientDetailVC: UIViewController {
     //MARK: - Instance Methods
     
     func validateIngredientName() -> (Bool, String?) {
-        
+        // check if the ingredient name is empty
         if let ingredientNameText = ingredientTextField.text {
             if ingredientNameText.isEmpty {
                 return (false, "Ingredient name cannot be empty")
             } else {
-                // check if the recipe name already exists
+                // check if the ingredient name already exists
                 let ingredients = DataModelService.shared.ingredientController.fetchedObjects!
                 var ingredientNames: [String] = []
                 for ingredient in ingredients {
@@ -47,6 +47,7 @@ class IngredientDetailVC: UIViewController {
                 }
             }
         }
+        // validation of ingredient name passed - no error to report
         return (true, nil)
     }
     
@@ -94,32 +95,23 @@ class IngredientDetailVC: UIViewController {
         }
         
         ingredient.name = name
-        
+        // save the ingredient and return to the prior navigation controller view
         Constants.ad.saveContext()
         navigationController?.popViewController(animated: true)
         
     }
     
     @IBAction func deleteTapped(_ sender: RoundButton) {
-        
+        // if editing an existing ingredient
         if ingredientToEdit != nil {
+            // delete the ingredient
             Constants.context.delete(ingredientToEdit!)
+            // save the updates and return to the prior navigation controller view
             Constants.ad.saveContext()
             navigationController?.popViewController(animated: true)
         } else {
+            // clear the ingredient name field if creating a new ingredient
             ingredientTextField.text = ""
         }
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
